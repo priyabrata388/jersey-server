@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.30'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    compile 'org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.32'
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.27'
+    compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.32'
+
+////    compile group: 'org.json', name: 'json', version: '20201115'
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}
+task hello;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("greeter.sayHello()");
+    }
+
+}
+test {
+    useJUnitPlatform()
+}
